@@ -32,11 +32,18 @@ public class NMAWalkTowards : MonoBehaviour
     public Vector3 fixedUpdateVelocity;
     public Vector3 prevPosFixedUpdate;
 
+    public bool autoFollow;
+
     // Start is called before the first frame update
     void Start()
     {
         if (myNma == null)
             myNma = GetComponent<NavMeshAgent>();
+
+        if(autoFollow)
+        {
+            SetDestination(1);
+        }
     }
 
     // Update is called once per frame
