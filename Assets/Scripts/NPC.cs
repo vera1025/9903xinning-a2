@@ -46,9 +46,9 @@ public class NPC : MonoBehaviour
         
 
         talk_id++;
-        if (talk_id == talk_content.Length + 1)
+        if (talk_id >= talk_content.Length + 1)
         {
-            talk_id = 0;
+            //talk_id = 0;
             talk.SetActive(false);
         }
         else
